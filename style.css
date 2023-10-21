@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #191919;
+  font-family: "Poppins", sans-serif;
+  color: #a7a7a7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+.sub-header {
+  font-size: 3.2rem;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+.signature {
+  color: #60be86;
+}
+.signature::after {
+  content: "Pro";
+  font-size: 1.5rem;
+  background-color: yellow;
+  position: absolute;
+  color: #60be86;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+}
+
+nav {
+  color: #a7a7a7;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.9rem;
+  font-size: 2rem;
+}
+nav .logo {
+  color: white;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+nav .logo span {
+  color: #60be86;
+}
+nav .logo:hover {
+  color: #60be86;
+}
+nav .logo:hover span {
+  color: white;
+}
+nav ul {
+  display: flex;
+  opacity: 0;
+  transition: 0.3s;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+nav ul li {
+  margin-right: 6.7rem;
+  cursor: pointer;
+}
+nav ul li:hover {
+  border-bottom: 2px solid #a7a7a7;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #a7a7a7;
+}
+nav ul li a:active {
+  color: #60be86;
+}
+nav ul li a:active span {
+  color: white;
+}
+nav ul li:nth-child(6),
+nav ul li:nth-child(7) {
+  margin-right: 2rem;
+}
+
+.icon {
+  width: 3rem;
+  height: 2.9rem;
+}
+
+section.home {
+  position: relative;
+  margin-top: 10.5rem;
+  margin-bottom: 34.8rem;
+}
+section.home .container {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+section.home .container h1 {
+  font-size: 5.8rem;
+  word-wrap: break-word;
+  color: #a7a7a7;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+}
+section.home .container img {
+  width: 80rem;
+  height: 80rem;
+  border-radius: 0.8rem;
+  transform: scale(1.05);
+}
+section.home .container img:hover {
+  transform: perspective(600px) rotateX(5deg) scale(1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.tech-stack {
+  text-align: center;
+  margin-bottom: 18.8rem;
+  opacity: 0;
+  animation: slideRight 0.7s ease forwards;
+}
+.tech-stack h3 {
+  margin-bottom: 4rem;
+}
+.tech-stack p {
+  font-size: 3.2rem;
+  margin-bottom: 14rem;
+}
+.tech-stack .container .skills {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3rem;
+  grid-row-gap: 10rem;
+}
+.tech-stack .container .skills li {
+  text-align: center;
+  width: 12rem;
+  height: 12rem;
+}
+.tech-stack .container .skills li:hover {
+  opacity: 0.5;
+}
+
+.developments {
+  text-align: center;
+  margin-bottom: 18.8rem;
+}
+.developments h3 {
+  margin-bottom: 1.7rem;
+}
+.developments .sub-header {
+  margin-bottom: 14rem;
+}
+.developments ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  grid-row-gap: 3rem;
+}
+.developments ul li.board {
+  background-color: #363636;
+  color: white;
+  border-radius: 2rem;
+  border: 2rem;
+  color: #a7a7a7;
+}
+.developments ul li.board img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 100%;
+  height: 26rem;
+}
+.developments ul li.board .description {
+  padding: 0 2.8em;
+}
+.developments ul li.board .description h4.subject {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: left;
+}
+.developments ul li.board .description .story {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+.developments ul li.board .description .skills {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.1rem;
+}
+.developments ul li.board .description .skills p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.developments ul li.board .description .skills span {
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.developments ul li.board .description .buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.developments ul li.board .description .buttons img {
+  height: 2rem;
+  width: 2rem;
+}
+.developments ul li.board .description .buttons .link {
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  color: white;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pre-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #a7a7a7;
+  font-size: 1.8rem;
+  margin-bottom: 5.3rem;
+}
+.pre-footer .contact-details {
+  display: flex;
+  align-items: center;
+  gap: 3.3rem;
+}
+.pre-footer h2 {
+  font-size: 3rem;
+}
+
+footer {
+  margin-bottom: 5.8rem;
+}
+footer span {
+  border-top: white solid 3px;
+  display: block;
+  margin-bottom: 4.9rem;
+}
+footer h5 {
+  font-size: 3rem;
+}
+footer .sub {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .sub ul {
+  display: flex;
+  justify-content: space-around;
+}
+footer .sub ul li {
+  margin-right: 5.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+footer .sub ul li a {
+  text-decoration: none;
+  color: #a7a7a7;
+}
+footer .sub ul li:hover {
+  color: white;
+  border-bottom: solid 1px #e1e1e1;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
